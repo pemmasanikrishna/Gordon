@@ -1,0 +1,28 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Gordon File Upload</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+</head>
+<body>
+	<h2>Upload file to calculate max satisfaction</h2>
+	<div>
+		<form method="POST" enctype="multipart/form-data" action="/upload">
+			<table>
+				<tr>
+					<td>Please select file to upload:</td>
+					<td><input type="file" name="file" /></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><input type="submit" value="Upload" /></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+	<div th:if="${message}">
+		<h2 th:text="${message}" />
+	</div>
+
+</body>
+</html>
